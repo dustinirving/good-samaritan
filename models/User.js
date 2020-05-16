@@ -17,15 +17,15 @@ module.exports = function (sequelize, DataTypes) {
     },
     address: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: true
     },
     emergencyPersonName: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: true
     },
     emergencyContact: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: true
     },
     email: {
       type: DataTypes.STRING,
