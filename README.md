@@ -59,7 +59,6 @@ By providing one-click, no-hassle, volunteers directed reports option instead of
 
 
 
-
 ## Team members (alphabetic)
 
 Dustin Irving: https://github.com/dustinirving
