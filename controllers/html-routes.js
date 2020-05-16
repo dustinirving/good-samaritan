@@ -10,15 +10,21 @@ router.get('/help', function (req, res) {
   res.sendFile(path.join(__dirname, '../public/help.html'))
 })
 
-router.get('/signup', function (req, res) {
-  res.sendFile(path.join(__dirname, '../public/signup.html'))
+router.get('/volunteer-signup', function (req, res) {
+  res.sendFile(path.join(__dirname, '../public/volunteer-signup.html'))
+})
+router.get('/patient-signup', function (req, res) {
+  res.sendFile(path.join(__dirname, '../public/patient-signup.html'))
 })
 
 router.get('/details', function (req, res) {
   res.sendFile(path.join(__dirname, '../public/details.html'))
 })
-router.get('/registered', function (req, res) {
-  res.sendFile(path.join(__dirname, '../public/registered.html'))
+router.get('/registered-patient', function (req, res) {
+  res.sendFile(path.join(__dirname, '../public/registered-patient.html'))
+})
+router.get('/registered-volunteer', function (req, res) {
+  res.sendFile(path.join(__dirname, '../public/registered-volunteer.html'))
 })
 
 router.get('/chat', function (req, res) {
