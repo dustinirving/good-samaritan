@@ -9,7 +9,7 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <style>
         body {
-            background: #eee;
+            background: #F7F9F9;
         }
 
         .chat-list {
@@ -121,19 +121,30 @@
 </head>
 
 <body>
+    <div class="jumbotron p-4 p-md-5 text-white rounded bg-info text-center ">
+        <div class="col-md-10 mx-auto">
+            <h2 class="display-4">Harm Reduction Chat</h2>
+        </div>
+    </div>
     <div class="container content">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div class="card">
-                    <div class="card-header">Chat</div>
+                <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+                    <div class="card-header">Message Volunteers</div>
                     <div class="card-body height3">
                         <ul class="chat-list"></ul>
                     </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12" style="text-align: center;">
+                                <div class="form-group" style="width: 70vw;">
+                                    <input type="email" class="form-control" id="chatInput" placeholder="Enter Message">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="chatInput"
-                        placeholder="Enter Message">
-                </div>
+                <br />
             </div>
         </div>
     </div>

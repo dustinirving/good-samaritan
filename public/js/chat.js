@@ -15,7 +15,7 @@ const chatMessage = ({ message, name }) => {
   userMessages.previous = message
   return `<li class="${wasPreviousIn ? 'out' : 'in'}">
     <div class="chat-img" bis_skin_checked="1">
-        <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar3.png">
+        <img alt="Avtar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTcpx4GmgeGMY-_ZEtrm4rqX29S7SMDwwOYTA9kHPPNtziUeRLW&usqp=CAU">
     </div>
     <div class="chat-body" bis_skin_checked="1">
         <div class="chat-message" bis_skin_checked="1">
