@@ -4,7 +4,7 @@ const router = require('express').Router()
 // Routes
 // =============================================================
 router.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '../public/index.html'))
+  res.sendFile(path.join(__dirname, '../public/landing.html'))
 })
 
 router.get('/help', function (req, res) {
