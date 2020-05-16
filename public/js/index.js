@@ -10,10 +10,10 @@ document.querySelector('#helpBtn').addEventListener('click', function () {
     return new Promise(executor)
   }
   locator().then(data => {
-    fetch(`/api/patients`, {
+    fetch('/api/patients', {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({lat: data.coords.latitude, long: data.coords.longitude})
+      body: JSON.stringify({ lat: data.coords.latitude, long: data.coords.longitude })
     }).then(response => {
       if (response.ok) location.reload()
     })
