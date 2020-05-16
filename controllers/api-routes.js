@@ -2,7 +2,7 @@ const db = require('../models')
 const router = require('express').Router()
 
 router.get('/volunteers', function (req, res) {
-  db.User.findAll()
+  db.Volunteer.findAll()
     .then(volunteer => res.status(200).json({ data: volunteer }))
     .catch(err => {
       console.log(err)
@@ -11,7 +11,7 @@ router.get('/volunteers', function (req, res) {
 })
 
 router.post('/volunteers', function (req, res) {
-  db.User.create(req.body)
+  db.Volunteer.create(req.body)
     .then(volunteer => res.status(201).json({ data: volunteer }))
     .catch(err => {
       console.log(err)
