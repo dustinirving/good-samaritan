@@ -1,15 +1,18 @@
 const socket = window.io('http://localhost:3000')
+const userMessages = {}
 
 let wasPreviousIn = false
 
 const registerSocket = () => {
-  socket.on('news', (data) => {
-    console.log(data)
-    socket.emit('my other event', { my: 'data' })
-  })
+//   socket.on('news', (data) => {
+//     console.log(data)
+//     socket.emit('my other event', { my: 'data' })
+//   })
+  socket.on('newMessage', (data) => addChatMessage(data))
 }
 
 const chatMessage = ({ message, name }) => {
+  userMessages.previous = message
   return `<li class="${wasPreviousIn ? 'out' : 'in'}">
     <div class="chat-img" bis_skin_checked="1">
         <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar3.png">
@@ -23,21 +26,23 @@ const chatMessage = ({ message, name }) => {
 </li>`
 }
 
-const addChatMessage = (message) => {
+const addChatMessage = ({ message, name }) => {
   const entry = document.querySelector('.chat-list')
-  socket.emit('my other event', { message })
-  const context = {
-    name: 'Jesse',
-    message
+  if (message !== userMessages.previous) {
+    entry.innerHTML += chatMessage({ message, name })
+    wasPreviousIn = !wasPreviousIn
   }
-  entry.innerHTML += chatMessage(context)
-  wasPreviousIn = !wasPreviousIn
 }
 
 const handleChange = (e) => {
   const message = e.target.value
   if (e.key === 'Enter') {
-    addChatMessage(message)
+    const context = {
+      name: 'Jesse',
+      message
+    }
+    addChatMessage(context)
+    socket.emit('message', context)
     e.target.value = ''
   }
 }
