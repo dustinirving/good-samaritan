@@ -12,35 +12,45 @@
 </head>
 
 <body>
-    <div class="jumbotron p-4 p-md-5 text-white rounded bg-info text-center">
+    <div class="jumbotron p-4 p-md-5 text-white rounded bg-info text-center ">
         <div class="col-md-10 mx-auto">
-            <h1 class="display-3">Thank You for Saving Lives</h1>
+            <h1 class="display-3">Report and Save Lives</h1>
         </div>
     </div>
-    <div class="container-fluid p-md-5">
+    <div class="container-fluid p-md-5 text-center">
+        <p class="card-text text-muted my-3">When you click the button, page will request your geolocation.
+            Please click yes to send alert to the nearest trained volunteers.</p>
         <div class="card-deck row">
-            <div class="card shadow col-md-6">
-                <div class="card-body text-center">
-                    <h4 class="card-title my-3">Witnessed a drug overdose </h4>
-                    <button type="button" class="btn btn-danger font-weight-bold  my-4 p-4" id="helpBtn">
+            <div class="card shadow col-md-4">
+                <div class="card-body ">
+                    <h4 class="card-title my-3">I am drug overdosed</h4>
+                    <button type="button" class="btn btn-danger font-weight-bold  my-4 p-4" id="patientHelpBtn">
                         HELP
                     </button>
-                    <p class="card-text text-muted my-3">When you click the button, page will request your geolocation.
-                        Please click yes to send alert to the nearest trained volunteers.</p>
-                </div>
-            </div>
-            <div class="card shadow col-md-6">
-                <div class="card-body text-center">
-                    <h4 class="card-title">Certified Volunteer Sign Up </h4>
 
                 </div>
             </div>
+            <div class="card shadow col-md-4">
+                <div class="card-body">
+                    <h4 class="card-title my-3">Witnessed a drug overdose </h4>
+                    <button type="button" class="btn btn-danger font-weight-bold  my-4 p-4" id="witnessHelpBtn">
+                        HELP
+                    </button>
+                </div>
+            </div>
+            <div class="card shadow col-md-4">
+                <div class="card-body my-3">
+                    <h4 class="card-title">Sign up as a volunteer/patient </h4>
+                    <button type="button" class="btn btn-light font-weight-bold  my-4 p-4" id="signUpBtn">
+                        sign up
+                    </button>
 
+                </div>
+            </div>
         </div>
-       
-        </div>
+
     </div>
-    </div>
+
 
     <!-- bootstrap js cdn  -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
