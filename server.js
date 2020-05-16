@@ -15,6 +15,13 @@ const db = require('./models')
 // Sets up the Express App
 // =============================================================
 const app = express()
+const http = require('http')
+const initSockets = require('./controllers/sockets')
+
+const server = http.createServer(app)
+const io = require('socket.io').listen(server)
+
+initSockets(io)
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }))
@@ -27,10 +34,10 @@ app.use(express.static('./public'))
 // Routes
 // =============================================================
 app.use(require('./controllers/html-routes.js'))
-// app.use('/api', require('./controllers/api-routes.js'))
+app.use('/api', require('./controllers/api-routes.js'))
 
 // Syncing our sequelize models and then starting our express app
 db.sequelize.sync({ force: true }).then(() => {
   const PORT = process.env.PORT || 3000
-  app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`))
+  server.listen(PORT, () => console.log(`App listening on PORT ${PORT}`))
 })
