@@ -4,15 +4,15 @@
 
 ## Facts about drug overdose death
 
-### Using drug alone
+#### 1. Using drug alone
 The B.C. Coroners Service says more than 1,400 people died of an illicit drug overdose in the province in 2017, nearly 90% of them were alone inside a home when they suffered an overdose. 
 
 If the victim called 911 via cellular devices and wasn’t able to provide address, latitude and longitude location-tracking is accurate within 50-300 meters, which means up to a 984-foot permissible radius, which entails a difficult search in high-density areas, like apartment buildings, public spaces.
 
-### 911 response time 
+#### 2. 911 response time 
 Canadians make 12 million calls to 911 every year. The national response time goal for paramedics in Canada is 8 minutes 59 seconds, for the most serious emergencies. 
 
-### Reluctance to call 911
+#### 3. Reluctance to call 911
 Based on the data collected from CCENDU members between 2013 and 2016, between 30% and 65% of those who witnessed an apparent overdose situation did not call 911. 
 
 Among those who reported not calling 911, 47% thought the situation was controlled, 38% reported fear of the police, 10% said they had no phone. 
