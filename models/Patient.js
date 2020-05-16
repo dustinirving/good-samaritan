@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  const User = sequelize.define('User', {
+  const Patient = sequelize.define('Patient', {
     // The email cannot be null, and must be a proper email before creation
     firstName: {
       type: DataTypes.STRING,
@@ -28,42 +28,12 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: true
     },
     email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true
-      }
+      type: DataTypes.STRING
     },
     // The password cannot be null
     password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        isEmail: true
-      }
-    },
-    phoneNumber: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        isEmail: true
-      }
-    },
-    longtitude: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-      validate: {
-        isFloat: true
-      }
-    },
-    latitude: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-      validate: {
-        isFloat: true
-      }
+      type: DataTypes.STRING
     }
   })
-  return User
+  return Patient
 }
