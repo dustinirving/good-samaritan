@@ -16,6 +16,22 @@ form.addEventListener('submit', event => {
     email: email.value.trim()
   }
 
+  if (
+    newVolunteer.firstName === '' ||
+    newVolunteer.lastName === '' ||
+    newVolunteer.password === '' ||
+    newVolunteer.phoneNumber === '' ||
+    newVolunteer.email === ''
+  ) {
+    firstName.value = ''
+    lastName.value = ''
+    password.value = ''
+    phoneNumber.value = ''
+    email.value = ''
+    alert('You must fill in all of the fields')
+    return
+  }
+
   fetch('/api/volunteers', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -25,10 +41,4 @@ form.addEventListener('submit', event => {
     .then(({ data }) => console.log(data))
     .then((window.location.href = 'registered-volunteer.html'))
     .catch(err => console.log(err))
-
-  firstName.value = ''
-  lastName.value = ''
-  password.value = ''
-  phoneNumber.value = ''
-  email.value = ''
 })

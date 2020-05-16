@@ -20,6 +20,25 @@ form.addEventListener('submit', event => {
     password: password.value.trim()
   }
 
+  if (
+    newPatient.firstName === '' ||
+    newPatient.lastName === '' ||
+    newPatient.address === '' ||
+    newPatient.emergencyPersonName === '' ||
+    newPatient.emergencyContact === '' ||
+    newPatient.email === '' ||
+    newPatient.password === ''
+  ) {
+    firstName.value = ''
+    lastName.value = ''
+    address.value = ''
+    drugUser.value = ''
+    emergencyContact.value = ''
+    email.value = ''
+    password.value = ''
+    alert('You must fill in all of the fields.')
+    return
+  }
   fetch('/api/patients', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -29,12 +48,4 @@ form.addEventListener('submit', event => {
     .then(({ data }) => console.log(data))
     .then((window.location.href = 'registered-patient.html'))
     .catch(err => console.log(err))
-
-  firstName.value = ''
-  lastName.value = ''
-  address.value = ''
-  drugUser.value = ''
-  emergencyContact.value = ''
-  email.value = ''
-  password.value = ''
 })
