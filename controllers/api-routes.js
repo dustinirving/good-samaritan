@@ -18,4 +18,13 @@ router.post('/volunteers', function (req, res) {
       res.status(500).json({ errors: [err] })
     })
 })
+
+router.post('/patients', function (req, res) {
+  db.Patient.create(req.body)
+    .then(patient => res.status(201).json({ data: patient }))
+    .catch(err => {
+      console.log(err)
+      res.status(500).json({ errors: [err] })
+    })
+})
 module.exports = router
