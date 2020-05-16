@@ -4,6 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
   </head>
-  <body></body>
+  <body>
+    <div class="jumbotron p-4 p-md-5 text-white rounded bg-secondary text-center">
+      <div class="col-md-10 mx-auto">
+        <h1 class="display-3">Sign up as a Volunteer</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <form id="signup-form">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" class="form-control" id="first-name" />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" class="form-control" id="last-name" />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" />
+            </div>
+            <div class="form-group">
+              <label for="phone-number">Phone Number</label>
+              <input type="phone-number" class="form-control" id="phone-number" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" />
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-secondary mb-2">Sign Up</button>
+            </div>
+            
+          </div>
+        <div class="col-3"></div>
+      </div>
+      </form>
+    </div>
+  <script src="./js/signup.js"></script>
+  </body>
 </html>
