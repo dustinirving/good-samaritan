@@ -22,7 +22,10 @@ form.addEventListener('submit', event => {
     body: JSON.stringify(newVolunteer)
   })
     .then(response => response.json())
-    .then(({ data }) => console.log(data).catch(console.log))
+    .then(({ data }) => console.log(data))
+    .then((window.location.href = 'registered.html'))
+    .catch(err => console.log(err))
+
   firstName.value = ''
   lastName.value = ''
   password.value = ''

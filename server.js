@@ -15,6 +15,9 @@ const db = require('./models')
 // Sets up the Express App
 // =============================================================
 const app = express()
+const initSockets = require('./controllers/sockets')
+const server = require('http').Server(app)
+const io = require('socket.io')(server)
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }))
@@ -34,3 +37,5 @@ db.sequelize.sync({ force: true }).then(() => {
   const PORT = process.env.PORT || 3000
   app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`))
 })
+
+initSockets(io)
