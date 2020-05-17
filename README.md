@@ -1,5 +1,11 @@
 # good samaritan
+![GitHub issues](https://img.shields.io/github/issues-raw/Lagbana/good-samaritan) ![Contributors](https://img.shields.io/github/contributors/Lagbana/good-samaritan) [![Build Status](https://travis-ci.com/Lagbana/good-samaritan.svg?branch=master)](https://travis-ci.com/Lagbana/good-samaritan) ![Last Commit](https://img.shields.io/github/last-commit/Lagbana/good-samaritan) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 Is an application that can help minimize opioid misuse related harm. As a multi-channel application it allows an at-risk-person who is close to or has overdosed and their family members to signal for help. The closest helper (trained-volunteer) receives this notification and the exact location of the person-at-risk and is able to provide quick first-aid revival using a provided Naloxone kit before the ambulance arrives.
+
+> **Deployed application**: <br> 
+> https://serene-mountain-91633.herokuapp.com/
 
 
 ## Facts about drug overdose fatality
@@ -13,9 +19,7 @@ If the person-at-risk calls 911 via cellular devices and wasn’t able to provid
 Canadians make 12 million calls to 911 every year. The national response time goal for paramedics in Canada is 8 minutes 59 seconds, for the most serious emergencies. 
 
 #### 3. Reluctance to call 911
-Based on the data collected from CCENDU members between 2013 and 2016, between 30% and 65% of those who witnessed an apparent overdose situation did not call 911. 
-
-Among those who reported not calling 911, 47% thought the situation was controlled, 38% reported fear of the police, 10% said they had no phone. 
+Based on the data collected from CCENDU members between 2013 and 2016, between 30% and 65% of those who witnessed an apparent overdose situation did not call 911. Among those who reported not calling 911, 47% thought the situation was controlled, 38% reported fear of the police, 10% said they had no phone. 
 
 ## Project Agenda
 
@@ -49,20 +53,17 @@ Among those who reported not calling 911, 47% thought the situation was controll
    Application: volunteers will receive a message with the patients’ geolocation ( and further details if provided) 
 
 
-## Project reasoning behind 
+## Inspiration behind project 
 
-1. The probability of surviving a drug overdose depends, in part, on the speed with which the person receives appropriate care or emergency intervention. 
-By reaching out to the trained volunteers nearby who can arrive and provide immediate help before paramedics arrive, we believe it can cut the patients untreated waiting period by more than half, and significantly decrease the number of fatalities or brain injuries 
+1. The probability of surviving a drug overdose depends, in part, on the speed with which the person receives appropriate care or emergency intervention. By reaching out to the trained volunteers nearby who can arrive and provide immediate help before paramedics arrive, we believe it can cut the patients untreated waiting period by more than half, and significantly decrease the number of fatalities or brain injuries 
 
 2. Most of the witness is reluctant to call 911 due to the underestimation of the situation severance. By reporting to trained volunteers nearby instead of 911, the app can increase the likelihood of the victims getting professional care. 
 
-3. 10% of the death occurs to homeless people, who might not have a phone to call emergency and relies solely on the help of the witnesses passing by. 
-On top of that, one of the main reasons for bystanders (drug dealer for instance) not calling 911 was concern about police involvement and possible arrest.
-By providing one-click, no-hassle, volunteers directed reports option instead of 911, the project can increase the possibility of patients getting medical attention. 
+3. 10% of the death occurs to homeless people, who might not have a phone to call emergency and relies solely on the help of the witnesses passing by. In addition, one of the main reasons for bystanders (drug dealer for instance) not calling 911 was concern about police involvement and possible arrest. By providing one-click, no-hassle, volunteers directed reports option instead of 911, the project can increase the possibility of patients getting medical attention. 
 
 
 
-## Future perspectives   
+## Future development   
 
 
 ### 1. From web application to mobile application:
@@ -82,11 +83,11 @@ Given the number of drug overdose death increasing rapidly,  it is time for Nexo
 
 ## Team members (alphabetical order)
 
-Dustin Irving: https://github.com/dustinirving
+Dustin Irving: https://github.com/dustinirving (email: dustin.irving@gmail.com)
 
-Jesse Okeya: https://github.com/jesseokeya
+Gulimire Maimaiti: https://github.com/mila-mamat (email: mila.windsor@gmail.com)
 
-Larry Agbana: https://github.com/Lagbana
+Jesse Okeya: https://github.com/jesseokeya (email: jesseokeya@gmail.com)
 
-Mila Mamat: https://github.com/mila-mamat
+Larry Agbana: https://github.com/Lagbana (email: larryagbana@gmail.com)
 
