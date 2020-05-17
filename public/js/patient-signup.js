@@ -45,7 +45,7 @@ form.addEventListener('submit', event => {
     body: JSON.stringify(newPatient)
   })
     .then(response => response.json())
-    .then(({ data }) => console.log(data))
+    .then(({ data }) => localStorage.setItem('user', data))
     .then((window.location.href = 'registered-patient.html'))
     .catch(err => console.log(err))
 })

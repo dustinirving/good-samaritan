@@ -1,4 +1,4 @@
-const socket = window.io()
+const socket = window.io('https://serene-mountain-91633.herokuapp.com/')
 const userMessages = {}
 
 let wasPreviousIn = false
@@ -38,7 +38,7 @@ const handleChange = (e) => {
   const message = e.target.value
   if (e.key === 'Enter') {
     const context = {
-      name: 'Jesse',
+      name: 'Anonymous',
       message
     }
     addChatMessage(context)
