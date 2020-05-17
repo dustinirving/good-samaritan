@@ -29,115 +29,67 @@ const distance = (lat1, lon1, lat2, lon2, unit) => {
     dist = Math.acos(dist)
     dist = dist * 180 / Math.PI
     dist = dist * 60 * 1.1515
-    if (unit === 'K') {
-      dist = dist * 1.609344
-    }
-    if (unit === 'N') {
-      dist = dist * 0.8684
-    }
+    if (unit === 'K') { dist = dist * 1.609344 }
+    if (unit === 'N') { dist = dist * 0.8684 }
     return dist
   }
 }
 
 router.get('/volunteers', function (req, res) {
   db.Volunteer.findAll()
-    .then(volunteer => res.status(200).json({
-      data: volunteer
-    }))
+    .then(volunteer => res.status(200).json({ data: volunteer }))
     .catch(err => {
       console.log(err)
-      res.status(500).json({
-        errors: [err]
-      })
+      res.status(500).json({ errors: [err] })
     })
 })
 
 router.post('/volunteers', async function (req, res) {
   const body = req.body
-  let {
-    longitude,
-    latitude
-  } = await ip(req)
+  let { longitude, latitude } = await ip(req)
   longitude = parseFloat(body.long || longitude || 0.00)
   latitude = parseFloat(body.lat || latitude || 0.00)
-  db.Volunteer.create({
-      longitude,
-      latitude,
-      ...body
-    })
-    .then(volunteer => res.status(201).json({
-      data: volunteer
-    }))
+  db.Volunteer.create({ longitude, latitude, ...body })
+    .then(volunteer => res.status(201).json({ data: volunteer }))
     .catch(err => {
       console.log(err)
-      res.status(500).json({
-        errors: [err]
-      })
+      res.status(500).json({ errors: [err] })
     })
 })
 
 router.post('/patients', async function (req, res) {
   const body = req.body
-  let {
-    longitude,
-    latitude
-  } = await ip(req)
+  let { longitude, latitude } = await ip(req)
   longitude = parseFloat(body.long || longitude || 0.00)
   latitude = parseFloat(body.lat || latitude || 0.00)
-  db.Patient.create({
-      longitude,
-      latitude,
-      ...body
-    })
-    .then(patient => res.status(201).json({
-      data: patient
-    }))
+  db.Patient.create({ longitude, latitude, ...body })
+    .then(patient => res.status(201).json({ data: patient }))
     .catch(err => {
       console.log(err)
-      res.status(500).json({
-        errors: [err]
-      })
+      res.status(500).json({ errors: [err] })
     })
 })
 
 router.post('/volunteers/alert', async function (req, res) {
-  try {
-    const body = req.body
-    console.log(body)
-    let {
-      longitude,
-      latitude
-    } = await ip(req)
-    longitude = parseFloat(body.long || longitude || 0.00)
-    latitude = parseFloat(body.lat || latitude || 0.00)
-    db.Volunteer.findAll()
-      .then(volunteers => {
-        console.log(volunteers)
-        let minDistance = Infinity
-        let userToSendNotification = null
-        volunteers.forEach(volunteer => {
-          const dist = distance(parseFloat(latitude || 0.00), parseFloat(longitude || 0.00), volunteer.latitude, volunteer.latitude, 'K')
-          if (dist <= minDistance) userToSendNotification = volunteer
-          minDistance = Math.min(minDistance, dist || 0)
-        })
-        res.send({
-          userToSendNotification,
-          context: {
-            ...body,
-            longitude,
-            latitude
-          }
-        })
+  const body = req.body
+  let { longitude, latitude } = await ip(req)
+  longitude = parseFloat(body.long || longitude || 0.00)
+  latitude = parseFloat(body.lat || latitude || 0.00)
+  db.Volunteer.findAll()
+    .then(volunteers => {
+      let minDistance = Infinity
+      let userToSendNotification = null
+      volunteers.forEach(volunteer => {
+        const dist = distance(parseFloat(latitude || 0.00), parseFloat(longitude || 0.00), volunteer.latitude, volunteer.latitude, 'K')
+        if (dist <= minDistance) userToSendNotification = volunteer
+        minDistance = Math.min(minDistance, dist || 0)
       })
-      .catch(err => {
-        console.log(err)
-        res.status(500).json({
-          errors: [err]
-        })
-      })
-  } catch (err) {
-    throw err
-  }
+      res.send({ userToSendNotification, context: { ...body, longitude, latitude } })
+    })
+    .catch(err => {
+      console.log(err)
+      res.status(500).json({ errors: [err] })
+    })
 })
 
 module.exports = router
