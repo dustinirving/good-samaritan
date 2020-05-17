@@ -34,7 +34,19 @@
       <h3 class="text-center" id="alertText">
         You are now officially registered as an emergency response volunteer.
       </h3>
+      <div id="map"></div>
     </div>
+    <!-- <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW4zeDINouomr69OXU-NDInCLKOhM9YwE&callback=initMap"
+    async defer></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script src="/js/volunteer.js"></script>
   </body>
