@@ -1,21 +1,20 @@
 document.querySelector('#helpBtn').addEventListener('click', function () {
   function locator () {
     function executor (resolve, reject) {
-      window.navigator.geolocation.getCurrentPosition(
+      return window.navigator.geolocation.getCurrentPosition(
         position => resolve(position),
-        err => reject(err)
+        err => { if (err) reject(err) }
       )
     }
 
     return new Promise(executor)
   }
+
   locator().then(data => {
-    fetch('/api/patients', {
-      method: 'PATCH',
+    fetch('/api/volunteers/alert', {
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ lat: data.coords.latitude, long: data.coords.longitude })
-    }).then(response => {
-      if (response.ok) location.reload()
-    })
+    }).then(response => response.json()).then(res => console.log(res))
   })
 })
