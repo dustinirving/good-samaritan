@@ -35,6 +35,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "mysql2": "^2.1.0",
+    "node-iplocate": "^1.0.2",
     "sequelize": "^5.21.9",
     "socket.io": "^2.3.0",
     "sqlite3": "^4.2.0"
