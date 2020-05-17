@@ -77,6 +77,7 @@ router.post('/volunteers/alert', async function (req, res) {
   latitude = parseFloat(body.lat || latitude || 0.00)
   db.Volunteer.findAll()
     .then(volunteers => {
+      console.log(volunteers)
       let minDistance = Infinity
       let userToSendNotification = null
       volunteers.forEach(volunteer => {
