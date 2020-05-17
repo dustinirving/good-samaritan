@@ -39,8 +39,6 @@ const entryPoint = () => {
       }
     }
     console.log(data)
-    alert(JSON.stringify(data))
-    console.log(data)
   })
 }
 
