@@ -1,12 +1,13 @@
-# good-samaritan
+# good samaritan
+Is an application that can help minimize opioid misuse related harm. As a multi-channel application it allows an risk person who is close to or has overdosed and their family members to signal for help. The closest helper (trained-volunteer) receives this notification and the exact location of the person-at-risk and is able to provide quick first-aid revival using a provided Naloxone kit before the ambulance arrives.
 
 
-## Facts about drug overdose death
+## Facts about drug overdose fatality
 
-#### 1. Using drug alone
+#### 1. Using drugs alone
 The B.C. Coroners Service says more than 1,400 people died of an illicit drug overdose in the province in 2017, nearly 90% of them were alone inside a home when they suffered an overdose. 
 
-If the victim called 911 via cellular devices and wasn’t able to provide address, latitude and longitude location-tracking is accurate within 50-300 meters, which means up to a 984-foot permissible radius, which entails a difficult search in high-density areas, like apartment buildings, public spaces.
+If the person-at-risk calls 911 via cellular devices and wasn’t able to provide an address, the chances of revival are reduced as latitude and longitude location-tracking is accurate within 50-300 meters - a 984-foot permissible radius - which entails a difficult search in high-density areas like apartment buildings and public spaces.
 
 #### 2. 911 response time 
 Canadians make 12 million calls to 911 every year. The national response time goal for paramedics in Canada is 8 minutes 59 seconds, for the most serious emergencies. 
@@ -18,9 +19,10 @@ Among those who reported not calling 911, 47% thought the situation was controll
 
 ## Project Agenda
 
-1. Help unattended patients send locations
-2. Decrease witnesses reluctance to seeking medical help 
-3. Shorten the untreated waiting period of the patient
+1. Ensure the person-at-risk is easily located
+2. Minimize the likelihood that witnesses will refuse to call for medical help 
+3. Shorten the time it takes for the person-at-risk to receive treatment or resuscitation
+4. Expand the circle of care by providing training to volunteers (similar to a first aid training) who can provide immediate first-aid
 
 
 ## Project target users
@@ -58,7 +60,7 @@ By providing one-click, no-hassle, volunteers directed reports option instead of
 
 
 
-## Team members (alphabetic)
+## Team members (alphabetical order)
 
 Dustin Irving: https://github.com/dustinirving
 
