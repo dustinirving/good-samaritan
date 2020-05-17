@@ -4,7 +4,10 @@ const initializeWebSockets = (io) => {
       hello: 'world'
     })
     socket.on('message', (data) => io.emit('newMessage', data))
-    socket.on('sendNotification', (data) => io.emit('recieveNotification', data))
+    socket.on('sendNotification', (data) => {
+      console.log(data)
+      io.emit('recieveNotification', data)
+    })
   })
 }
 
