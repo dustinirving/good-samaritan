@@ -26,6 +26,15 @@ module.exports = function (sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    longitude: {
+      type: DataTypes.FLOAT,
+      defaultValue: null
+
+    },
+    latitude: {
+      type: DataTypes.FLOAT,
+      defaultValue: null
     }
   })
   return Volunteer
