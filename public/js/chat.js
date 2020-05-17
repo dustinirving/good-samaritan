@@ -1,4 +1,4 @@
-const socket = window.io('http://localhost:3000')
+const socket = window.io()
 const userMessages = {}
 
 let wasPreviousIn = false
