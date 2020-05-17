@@ -1,7 +1,6 @@
 # good-samaritan
 
 
-
 ## Facts about drug overdose death
 
 #### 1. Using drug alone
