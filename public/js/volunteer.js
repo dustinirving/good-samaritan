@@ -1,11 +1,25 @@
 const socket = window.io()
 
-function toggleBounce(marker) {
-  if (marker.getAnimation() !== null) {
-    marker.setAnimation(null)
-  } else {
-    marker.setAnimation(window.google.maps.Animation.BOUNCE)
-  }
+function geocodeLatLng (map, latlng) {
+  const geocoder = new window.google.maps.Geocoder
+  const infowindow = new google.maps.InfoWindow
+  geocoder.geocode({ location: latlng }, function (results, status) {
+    if (status === 'OK') {
+      if (results[0]) {
+        map.setZoom(16)
+        var marker = new window.google.maps.Marker({
+          position: latlng,
+          map: map
+        })
+        infowindow.setContent(results[0].formatted_address)
+        infowindow.open(map, marker)
+      } else {
+        window.alert('No results found')
+      }
+    } else {
+      window.alert('Geocoder failed due to: ' + status)
+    }
+  })
 }
 
 const entryPoint = () => {
@@ -21,15 +35,7 @@ const entryPoint = () => {
           zoom: 16,
           center: latLng
         })
-        const marker = new window.google.maps.Marker({
-          position: latLng,
-          map: map,
-          draggable: true,
-          animation: window.google.maps.Animation.DROP,
-          title: 'Hello World!'
-        })
-        marker.addListener('click', () => toggleBounce(marker))
-        marker.setMap(map)
+        geocodeLatLng(map, latLng)
       }
     }
     console.log(data)
