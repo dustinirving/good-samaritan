@@ -30,19 +30,20 @@ Among those who reported not calling 911, 47% thought the situation was controll
 
 2. Witnesses who are not willing to get involved except reporting 
 
-  Application: One-click solution for sending out report message with the geolocation to nearby volunteers 
+   Application: One-click solution for sending out report message with the geolocation to nearby volunteers 
 
 3. Witnesses who are family or friends that seeking further help in addition to 911 emergency call
 
    Application: 
 
-a.  sending out a report message with geolocation, exact address, patients symptoms to nearby volunteers
+   a.  sending out a report message with geolocation, exact address, patients symptoms to nearby volunteers
 
-b.  providing further guidance on how to aid the patient before help arrives
+   b.  providing further guidance on how to aid the patient before help arrives
 
-c.  providing in-app chat channel with the volunteers 
+   c.  providing in-app chat channel with the volunteers 
 
-4. certified/ trained volunteers who are willing to help drug overdose patients nearby
+4. Certified/ trained volunteers who are willing to help drug overdose patients nearby
+   
    Application: volunteers will receive a message with the patients’ geolocation ( and further details if provided) 
 
 
@@ -62,17 +63,17 @@ By providing one-click, no-hassle, volunteers directed reports option instead of
 ## Future perspectives   
 
 
-### 1. from web application to mobile application:
+### 1. From web application to mobile application:
   The web application is fully responsive and can be easily transformed to a mobile app for better user experience, faster online access, and more functionality. In the future, we have plans to add more functions like taking video for virtual help, tracking patients real-time location to keep their contacts informed.
 
 ### 2. From web application to IoT: 
    For patients in really bad conditions or cannot afford mobile devices to request medical help, IoT can open the door to an easier access, lower cost, and hopefully real-time body condition monitoring. 
 
 ### 3. From web application to 911 system integration:
-    Currently, 911 mainly relies on paramedics, voluntary firefighters or police officers. But given the number of canadians who have firs-aid training and willing to help, after careful selection and certification, informing trained volunteers nearby by 911 might become one of the solutions to get patients immediate help. 
+Currently, 911 mainly relies on paramedics, voluntary firefighters or police officers. But given the number of canadians who have firs-aid training and willing to help, after careful selection and certification, informing trained volunteers nearby by 911 might become one of the solutions to get patients immediate help.
  
 ### 4. Adding Nexolone to the first-aid kit 
-    Given the number of drug overdose death increasing rapidly,  it is time for Nexolone to be legally required and be added to the first-aid kit, to lift the accessibility barriers. 
+Given the number of drug overdose death increasing rapidly,  it is time for Nexolone to be legally required and be added to the first-aid kit, to lift the accessibility barriers.  
 
 
 
