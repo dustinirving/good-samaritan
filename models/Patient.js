@@ -33,6 +33,15 @@ module.exports = function (sequelize, DataTypes) {
     // The password cannot be null
     password: {
       type: DataTypes.STRING
+    },
+    longitude: {
+      type: DataTypes.FLOAT,
+      defaultValue: null
+
+    },
+    latitude: {
+      type: DataTypes.FLOAT,
+      defaultValue: null
     }
   })
   return Patient
