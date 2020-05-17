@@ -1,5 +1,5 @@
 # good samaritan
-Is an application that can help minimize opioid misuse related harm. As a multi-channel application it allows an risk person who is close to or has overdosed and their family members to signal for help. The closest helper (trained-volunteer) receives this notification and the exact location of the person-at-risk and is able to provide quick first-aid revival using a provided Naloxone kit before the ambulance arrives.
+Is an application that can help minimize opioid misuse related harm. As a multi-channel application it allows an at-risk-person who is close to or has overdosed and their family members to signal for help. The closest helper (trained-volunteer) receives this notification and the exact location of the person-at-risk and is able to provide quick first-aid revival using a provided Naloxone kit before the ambulance arrives.
 
 
 ## Facts about drug overdose fatality
@@ -75,7 +75,7 @@ By providing one-click, no-hassle, volunteers directed reports option instead of
 Currently, 911 mainly relies on paramedics, voluntary firefighters or police officers. But given the number of canadians who have firs-aid training and willing to help, after careful selection and certification, informing trained volunteers nearby by 911 might become one of the solutions to get patients immediate help.
  
 ### 4. Adding Nexolone to the first-aid kit 
-Given the number of drug overdose death increasing rapidly,  it is time for Nexolone to be legally required and be added to the first-aid kit, to lift the accessibility barriers.  
+Given the number of drug overdose death increasing rapidly,  it is time for Nexolone to be legally required and be added to the first-aid kit, to lift the accessibility barriers. In the future the app could also map out publicly available Naloxone kits around the city in select places like apartment buildings and school residences.  
 
 
 
