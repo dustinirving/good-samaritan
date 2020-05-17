@@ -10,17 +10,32 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
   </head>
   <body>
     <div class="jumbotron p-4 p-md-5 text-white rounded bg-info text-center">
       <div class="col-md-10 mx-auto">
-        <h1 class="display-3">Thank You for Registering!</h1>
+        <h1 class="display-3">Harm Reduction Dashboard</h1>
       </div>
     </div>
     <div class="container">
-      <h3 class="text-center">
+      <h3 class="text-center" id="alertText">
         You are now officially registered as an emergency response volunteer.
       </h3>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="/js/volunteer.js"></script>
   </body>
 </html>
