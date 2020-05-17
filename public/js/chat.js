@@ -38,7 +38,7 @@ const handleChange = (e) => {
   const message = e.target.value
   if (e.key === 'Enter') {
     const context = {
-      name: localStorage.getItem('user').firstName || 'Anonymous',
+      name: 'Anonymous',
       message
     }
     addChatMessage(context)
