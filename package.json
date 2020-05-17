@@ -1,7 +1,7 @@
 {
   "name": "fsf-cu-project2",
   "version": "0.0.1",
-  "description": "Instructor demo for Project 2 of the Carleton University Coding Bootcamp",
+  "description": "Hackathon project: reducing opioid crisis harm",
   "main": "server.js",
   "scripts": {
     "test": "npm run lint",

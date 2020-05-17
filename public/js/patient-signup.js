@@ -46,6 +46,6 @@ form.addEventListener('submit', event => {
   })
     .then(response => response.json())
     .then(({ data }) => console.log(data))
-    .then((window.location.href = 'registered-patient.html'))
+    // .then((window.location.href = 'registered-patient.html'))
     .catch(err => console.log(err))
 })
