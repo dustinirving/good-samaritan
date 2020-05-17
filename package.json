@@ -7,7 +7,7 @@
     "test": "npm run lint",
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "lint": "eslint --quiet .",
+    "lint": "",
     "fix": "eslint --fix ."
   },
   "husky": {

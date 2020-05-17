@@ -14,7 +14,7 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 100%;
+        height: 80vh;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -32,11 +32,16 @@
     </div>
     <div class="container">
       <h3 class="text-center" id="alertText">
-        You are now officially registered as an emergency response volunteer.
+        You are now officially registered as an emergency response volunteer
       </h3>
+      <br>
+       <h3 class="text-center"> Navigate to <a href="/chat">chat</a> to keep in tocuh with available patients</h3>
+      <br />
       <div id="map"></div>
+      <br />
+      <br />
     </div>
-    <!-- <script>
+    <script>
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -45,8 +50,8 @@
         });
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW4zeDINouomr69OXU-NDInCLKOhM9YwE&callback=initMap"
-    async defer></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA51m8rxk59-GxAiPkwKJFPiAF7NVje3EA&callback=initMap"
+    async defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script src="/js/volunteer.js"></script>
   </body>

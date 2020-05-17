@@ -9,7 +9,7 @@ const config = require(path.resolve(__dirname, '..', 'config/config.json'))[env]
 const db = {}
 
 let sequelize
-console.log(config.use_env_variable)
+
 if (config.use_env_variable) {
   // sequelize = new Sequelize('sqlite::memory:')
   sequelize = new Sequelize(process.env[config.use_env_variable], config)

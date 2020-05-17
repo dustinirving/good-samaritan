@@ -71,25 +71,23 @@ router.post('/patients', async function (req, res) {
 })
 
 router.post('/volunteers/alert', async function (req, res) {
-  const body = req.body
-  let { longitude, latitude } = await ip(req)
-  longitude = parseFloat(body.long || longitude || 0.00)
-  latitude = parseFloat(body.lat || latitude || 0.00)
-  db.Volunteer.findAll()
-    .then(volunteers => {
-      let minDistance = Infinity
-      let userToSendNotification = null
-      volunteers.forEach(volunteer => {
-        const dist = distance(parseFloat(latitude || 0.00), parseFloat(longitude || 0.00), volunteer.latitude, volunteer.latitude, 'K')
-        if (dist <= minDistance) userToSendNotification = volunteer
-        minDistance = Math.min(minDistance, dist || 0)
-      })
-      res.send({ userToSendNotification, context: { ...body, longitude, latitude } })
+  try {
+    const body = req.body
+    console.log(body)
+    let { longitude, latitude } = await ip(req)
+    longitude = parseFloat(body.long || longitude || 0.00)
+    latitude = parseFloat(body.lat || latitude || 0.00)
+    const volunteers = await db.Volunteer.findAll()
+    let minDistance = Infinity, userToSendNotification = null
+    volunteers.forEach(volunteer => {
+      const dist = distance(parseFloat(latitude || 0.00), parseFloat(longitude || 0.00), volunteer.latitude, volunteer.latitude, 'K')
+      if (dist <= minDistance) userToSendNotification = volunteer
+      minDistance = Math.min(minDistance, dist || 0)
     })
-    .catch(err => {
-      console.log(err)
-      res.status(500).json({ errors: [err] })
-    })
+    res.send({ userToSendNotification, context: { ...body, longitude, latitude } })
+  } catch (err) {
+    res.status(500).json({ errors: [err] })
+  }
 })
 
 module.exports = router
