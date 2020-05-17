@@ -3,9 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelector('#helpBtn').addEventListener('click', function () {
     function locator() {
+      console.log('11')
       function executor(resolve, reject) {
         return window.navigator.geolocation.getCurrentPosition(
-          position => resolve(position),
+          position => {
+            console.log('tets')
+            resolve(position)
+          },
           err => {
             if (err) reject(err)
           }
@@ -23,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     locator().then(data => {
-      fetch('/api/volunteers/alert', {
+      fetch('/api/volunteers/alert/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -73,11 +73,11 @@ router.post('/patients', async function (req, res) {
 router.post('/volunteers/alert', async function (req, res) {
   try {
     const body = req.body
+    console.log(body)
     let { longitude, latitude } = await ip(req)
     longitude = parseFloat(body.long || longitude || 0.00)
     latitude = parseFloat(body.lat || latitude || 0.00)
     const volunteers = await db.Volunteer.findAll()
-    console.log(volunteers)
     let minDistance = Infinity, userToSendNotification = null
     volunteers.forEach(volunteer => {
       const dist = distance(parseFloat(latitude || 0.00), parseFloat(longitude || 0.00), volunteer.latitude, volunteer.latitude, 'K')
