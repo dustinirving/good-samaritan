@@ -39,7 +39,7 @@ app.use(require('./controllers/html-routes.js'))
 app.use('/api', require('./controllers/api-routes.js'))
 
 // Syncing our sequelize models and then starting our express app
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync().then(() => {
   const PORT = process.env.PORT || 3000
   server.listen(PORT, () => console.log(`App listening on PORT ${PORT}`))
 })
