@@ -38,7 +38,7 @@ form.addEventListener('submit', event => {
     body: JSON.stringify(newVolunteer)
   })
     .then(response => response.json())
-    .then(({ data }) => console.log(data))
+    .then(({ data }) => localStorage.setItem('user', data))
     .then((window.location.href = 'registered-volunteer.html'))
     .catch(err => console.log(err))
 })
