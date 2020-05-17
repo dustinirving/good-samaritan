@@ -1,3 +1,5 @@
+const socket = window.io()
+
 document.querySelector('#helpBtn').addEventListener('click', function () {
   function locator () {
     function executor (resolve, reject) {
@@ -10,11 +12,18 @@ document.querySelector('#helpBtn').addEventListener('click', function () {
     return new Promise(executor)
   }
 
+  socket.on('recieveNotification', (data) => {
+    const user = localStorage.getItem('user')
+    if (user && data.userToSendNotification) {
+      console.log(data)
+    }
+  })
+
   locator().then(data => {
     fetch('/api/volunteers/alert', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ lat: data.coords.latitude, long: data.coords.longitude })
-    }).then(response => response.json()).then(res => console.log(res))
+    }).then(response => response.json()).then(res => socket.emit('sendNotification', res))
   })
 })

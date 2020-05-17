@@ -20,7 +20,7 @@ if (config.use_env_variable) {
     config.password,
     config
   )
-  // sequelize = new Sequelize('sqlite::memory:')
+  sequelize = new Sequelize('sqlite::memory:')
 }
 
 fs.readdirSync(__dirname)

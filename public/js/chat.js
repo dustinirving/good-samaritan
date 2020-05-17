@@ -1,13 +1,10 @@
-const socket = window.io('https://serene-mountain-91633.herokuapp.com/')
+// const socket = window.io('https://serene-mountain-91633.herokuapp.com/')
+const socket = window.io()
 const userMessages = {}
 
 let wasPreviousIn = false
 
 const registerSocket = () => {
-//   socket.on('news', (data) => {
-//     console.log(data)
-//     socket.emit('my other event', { my: 'data' })
-//   })
   socket.on('newMessage', (data) => addChatMessage(data))
 }
 

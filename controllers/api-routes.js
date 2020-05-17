@@ -49,7 +49,6 @@ router.post('/volunteers', async function (req, res) {
   let { longitude, latitude } = await ip(req)
   longitude = parseFloat(body.long || longitude || 0.00)
   latitude = parseFloat(body.lat || latitude || 0.00)
-  console.log({ longitude, latitude, ...body })
   db.Volunteer.create({ longitude, latitude, ...body })
     .then(volunteer => res.status(201).json({ data: volunteer }))
     .catch(err => {
@@ -85,7 +84,7 @@ router.post('/volunteers/alert', async function (req, res) {
         if (dist <= minDistance) userToSendNotification = volunteer
         minDistance = Math.min(minDistance, dist || 0)
       })
-      res.send({ userToSendNotification })
+      res.send({ userToSendNotification, context: { ...body, longitude, latitude } })
     })
     .catch(err => {
       console.log(err)
