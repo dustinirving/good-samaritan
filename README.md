@@ -53,7 +53,7 @@ Based on the data collected from CCENDU members between 2013 and 2016, between 3
    Application: volunteers will receive a message with the patients’ geolocation ( and further details if provided) 
 
 
-## Project reasoning behind 
+## Inspiration behind project 
 
 1. The probability of surviving a drug overdose depends, in part, on the speed with which the person receives appropriate care or emergency intervention. By reaching out to the trained volunteers nearby who can arrive and provide immediate help before paramedics arrive, we believe it can cut the patients untreated waiting period by more than half, and significantly decrease the number of fatalities or brain injuries 
 
@@ -63,7 +63,7 @@ Based on the data collected from CCENDU members between 2013 and 2016, between 3
 
 
 
-## Future perspectives   
+## Future development   
 
 
 ### 1. From web application to mobile application:
