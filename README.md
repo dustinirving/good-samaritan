@@ -4,6 +4,9 @@
 
 Is an application that can help minimize opioid misuse related harm. As a multi-channel application it allows an at-risk-person who is close to or has overdosed and their family members to signal for help. The closest helper (trained-volunteer) receives this notification and the exact location of the person-at-risk and is able to provide quick first-aid revival using a provided Naloxone kit before the ambulance arrives.
 
+> **Deployed application**: <br> 
+> https://serene-mountain-91633.herokuapp.com/
+
 
 ## Facts about drug overdose fatality
 
