@@ -1,12 +1,11 @@
-const socket = window.io()
+const socket = window.io('http://localhost:3000')
 
 const entryPoint = () => {
+  socket.on('connect', () => console.log('socket connected!'));
   socket.on('recieveNotification', (data) => {
-    const user = localStorage.getItem('user')
-    if (user && data.userToSendNotification) {
-      alert(JSON.stringify(data))
-      console.log(data)
-    }
+    // const user = localStorage.getItem('user')
+    alert(JSON.stringify(data))
+    console.log(data)
   })
 }
 
